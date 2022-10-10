@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const NavLinks = () => {
@@ -19,7 +19,7 @@ const NavLinks = () => {
   const line = {
     borderRight: '2px solid black',
     marginRight: '2.563rem',
-  }
+  };
   return (
     <nav id="navbar-container">
       <ul style={navStyle}>
@@ -29,13 +29,13 @@ const NavLinks = () => {
         <li className="nav-link">
           <Link to="/mission" style={navLink}>Missions</Link>
         </li>
-        <span  style={line} />
+        <span style={line} />
         <li className="nav-link">
           <Link to="/profile" style={navLink}>My Profile</Link>
         </li>
       </ul>
     </nav>
   );
-}
+};
 
 export default NavLinks;

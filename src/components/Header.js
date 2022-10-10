@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import image from './planet.png';
 import NavLinks from './NavLinks';
 
@@ -31,21 +31,21 @@ const Header = () => {
     display: 'flex',
     gap: '20px',
     alignItems: 'center',
-  }
+  };
 
   const imageStyle = {
     width: '100px',
     height: '100px',
-  }
+  };
   return (
     <header style={headerStyle}>
       <div style={logoContainerStyle}>
         <img src={image} alt="logo" style={imageStyle} />
-        <h1 style={headerTitleStyle}>Space Travelers' Hub</h1>
+        <h1 style={headerTitleStyle}>Space Travelers Hub</h1>
       </div>
       <NavLinks />
     </header>
-  )
+  );
 };
 
 export default Header;
