@@ -7,7 +7,7 @@ const Header = () => {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-    height: '4.938rem',
+    height: '7.938rem',
     margin: '0 0 2.375rem',
     padding: '1.438rem 6.188rem 1.688rem 4.85rem',
     backgroundColor: '#fff',
