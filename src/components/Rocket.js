@@ -1,5 +1,10 @@
 import React from 'react';
+import RocketContainer from './RocketContainer';
 
-const Rocket = () => <h1>Rockets</h1>;
+const Rocket = () => (
+  <>
+    <RocketContainer />
+  </>
+);
 
 export default Rocket;
