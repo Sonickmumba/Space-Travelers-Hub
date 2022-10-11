@@ -7,7 +7,6 @@ import { getRocketsFromApi } from '../redux/rockets/rockets';
 const RocketContainer = () => {
   const { rockets } = useSelector((state) => state.rockets);
   const dispatch = useDispatch();
-  console.log(rockets);
 
   useEffect(() => {
     dispatch(getRocketsFromApi());
