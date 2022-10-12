@@ -45,14 +45,14 @@ export const rocketReducer = (state = initialState, action) => {
       return [...action.payload];
     case ROCKET_RESERVE:
       return state.map((state) => {
-        if (state.id !== action.id) {
+        if (state.id !== action.payload) {
           return state;
         }
         return { ...state, reserved: true };
       });
     case CANCEL_RESERVE:
       return state.map((state) => {
-        if (state.id !== action.id) {
+        if (state.id !== action.payload) {
           return state;
         }
         return { ...state, reserved: false };
@@ -64,12 +64,12 @@ export const rocketReducer = (state = initialState, action) => {
 
 export const rocketReserve = (id) => ({
   type: ROCKET_RESERVE,
-  id,
+  payload: id,
 });
 
 export const rocketCancelReserve = (id) => ({
   type: CANCEL_RESERVE,
-  id,
+  payload: id,
 });
 
 export default rocketReducer;

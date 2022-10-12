@@ -2,14 +2,12 @@ import { configureStore, applyMiddleware } from '@reduxjs/toolkit';
 import { combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 import { rocketReducer } from './rockets/rockets';
-// import checkStatus from './categories/categories';
 
 const allReducers = combineReducers({
   rockets: rocketReducer,
-  // status: checkStatus,
+  // add mission reducer here
 });
 
 const store = configureStore({ reducer: allReducers }, applyMiddleware(thunk));
-// const store = configureStore({ reducer: allReducer, middleware: [thunk] });
 
 export default store;

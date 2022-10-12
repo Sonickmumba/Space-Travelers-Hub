@@ -2,15 +2,16 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
-import Rocket from './components/Rocket';
-import Mission from './components/Mission';
-import Profile from './components/Profile';
+import Rocket from './components/rockets/Rocket';
+import Mission from './components/mission/Mission';
+import Profile from './components/profile/Profile';
 
 const App = () => (
   <BrowserRouter>
     <Header />
     <Routes>
       <Route path="/" element={<Rocket />} />
+      <Route path="/rocket" element={<Rocket />} />
       <Route path="/mission" element={<Mission />} />
       <Route path="/profile" element={<Profile />} />
     </Routes>

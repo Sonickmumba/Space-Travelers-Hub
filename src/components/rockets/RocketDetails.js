@@ -2,7 +2,7 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 import { useDispatch } from 'react-redux';
 import styles from './RocketDetails.module.css';
-import { rocketReserve, rocketCancelReserve } from '../redux/rockets/rockets';
+import { rocketReserve, rocketCancelReserve } from '../../redux/rockets/rockets';
 
 const RocketDetails = ({ rocket }) => {
   const {

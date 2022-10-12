@@ -2,15 +2,17 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 // import { v4 as id4 } from 'uuid';
 import RocketDetails from './RocketDetails';
-import { getRocketsFromApi } from '../redux/rockets/rockets';
+import { getRocketsFromApi } from '../../redux/rockets/rockets';
 
 const RocketContainer = () => {
   const rockets = useSelector((state) => state.rockets);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getRocketsFromApi());
-  }, [dispatch]);
+    if (rockets.length === 0) {
+      dispatch(getRocketsFromApi());
+    }
+  }, [dispatch, rockets.length]);
 
   const hubContainer = {
     display: 'flex',
