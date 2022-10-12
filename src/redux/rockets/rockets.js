@@ -4,14 +4,12 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 const api = 'https://api.spacexdata.com/v3/rockets';
 
 // actions
-// const ADD = 'SPACE-TRAVELERS-HUB/rockets/ADD';
-// const DELETE = 'SPACE-TRAVELERS-HUB/rockets/DELETE';
+// const CANCEL_RESERVE = 'SPACE-TRAVELERS-HUB/rockets/CANCEL_RESERVE';
+const ROCKET_RESERVE = 'SPACE-TRAVELERS-HUB/rockets/ROCKET_RESERVE';
 const FETCH_ROCKETS = 'SPACE-TRAVELERS-HUB/books/FETCH_ROCKETS';
 
 // INITIAL STATE
-export const initialState = {
-  rockets: [],
-};
+const initialState = [];
 
 // get books from API
 export const getRocketsFromApi = createAsyncThunk(
@@ -19,9 +17,19 @@ export const getRocketsFromApi = createAsyncThunk(
   async (args, { dispatch }) => {
     const response = await fetch(api);
     const rocketData = await response.json();
-    const rockets = rocketData.map((rocket) => ({
-      ...rocket,
-    }));
+    const rockets = [];
+    rocketData.map((res) => {
+      rockets.push(
+        {
+          id: res.rocket_id,
+          name: res.rocket_name,
+          description: res.description,
+          image: res.flickr_images[0],
+          reserved: false,
+        },
+      );
+      return res;
+    });
     dispatch({
       type: FETCH_ROCKETS,
       payload: rockets,
@@ -34,12 +42,22 @@ export const getRocketsFromApi = createAsyncThunk(
 export const rocketReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_ROCKETS:
-      return {
-        ...state, rockets: action.payload,
-      };
+      return [...action.payload];
+    case ROCKET_RESERVE:
+      return state.map((state) => {
+        if (state.id !== action.id) {
+          return state;
+        }
+        return { ...state, reserved: true };
+      });
     default:
       return state;
   }
 };
+
+export const rocketReserve = (id) => ({
+  type: ROCKET_RESERVE,
+  id,
+});
 
 export default rocketReducer;
