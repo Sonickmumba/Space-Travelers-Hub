@@ -4,7 +4,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 const api = 'https://api.spacexdata.com/v3/rockets';
 
 // actions
-// const CANCEL_RESERVE = 'SPACE-TRAVELERS-HUB/rockets/CANCEL_RESERVE';
+const CANCEL_RESERVE = 'SPACE-TRAVELERS-HUB/rockets/CANCEL_RESERVE';
 const ROCKET_RESERVE = 'SPACE-TRAVELERS-HUB/rockets/ROCKET_RESERVE';
 const FETCH_ROCKETS = 'SPACE-TRAVELERS-HUB/books/FETCH_ROCKETS';
 
@@ -50,6 +50,13 @@ export const rocketReducer = (state = initialState, action) => {
         }
         return { ...state, reserved: true };
       });
+    case CANCEL_RESERVE:
+      return state.map((state) => {
+        if (state.id !== action.id) {
+          return state;
+        }
+        return { ...state, reserved: false };
+      });
     default:
       return state;
   }
@@ -57,6 +64,11 @@ export const rocketReducer = (state = initialState, action) => {
 
 export const rocketReserve = (id) => ({
   type: ROCKET_RESERVE,
+  id,
+});
+
+export const rocketCancelReserve = (id) => ({
+  type: CANCEL_RESERVE,
   id,
 });
 
