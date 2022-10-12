@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Rocket from './components/Rocket';
-import Mission from './components/Mission';
+import MissionLists from './components/Mission';
 import Profile from './components/Profile';
 
 const App = () => (
@@ -11,7 +11,7 @@ const App = () => (
     <Header />
     <Routes>
       <Route path="/" element={<Rocket />} />
-      <Route path="/mission" element={<Mission />} />
+      <Route path="/mission" element={<MissionLists />} />
       <Route path="/profile" element={<Profile />} />
     </Routes>
   </BrowserRouter>
