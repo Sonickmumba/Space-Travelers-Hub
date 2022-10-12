@@ -24,6 +24,21 @@
   color: #fff;
 }
 
+.buttonCancel {
+  width: 12.5rem;
+  height: 2.063rem;
+  margin: 0.75rem 0 0.563rem 0;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  background-color: #fff;
+  border: 2px solid rgb(108 117 125);
+  font-size: 0.913rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: rgb(108 117 125);
+}
+
 .title {
   font-size: 1.8rem;
   margin-top: 0;

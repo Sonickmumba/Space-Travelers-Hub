@@ -2,17 +2,22 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 import { useDispatch } from 'react-redux';
 import styles from './RocketDetails.module.css';
-import { rocketReserve } from '../redux/rockets/rockets';
+import { rocketReserve, rocketCancelReserve } from '../redux/rockets/rockets';
 
 const RocketDetails = ({ rocket }) => {
   const {
-    description, image, id, name,
+    description, image, id, name, reserved,
   } = rocket;
   const dispatch = useDispatch();
 
   const handleReserve = (e) => {
     const { id } = e.target;
     dispatch(rocketReserve(id));
+  };
+
+  const handleCancelReserve = (e) => {
+    const { id } = e.target;
+    dispatch(rocketCancelReserve(id));
   };
 
   return (
@@ -23,10 +28,11 @@ const RocketDetails = ({ rocket }) => {
       <div className="rocket-info">
         <h1 className={styles.title}>{name}</h1>
         <div className={styles.description}>
-          <span className={styles.reserve}>Reserved</span>
+          {reserved && <span className={styles.reserve}>Reserved</span>}
           {description}
         </div>
-        <button type="button" className={styles.button} id={id} onClick={handleReserve}>Reserve Rocket</button>
+        {!reserved && <button type="button" className={styles.button} id={id} onClick={handleReserve}>Reserve Rocket</button>}
+        {reserved && <button type="button" className={styles.buttonCancel} id={id} onClick={handleCancelReserve}>Cancel Reservation</button>}
       </div>
     </>
   );
