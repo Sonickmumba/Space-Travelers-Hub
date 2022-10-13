@@ -1,3 +1,25 @@
 * {
   box-sizing: border-box;
 }
+
+.profile-container {
+  display: flex;
+  padding: 1.438rem 6.188rem 1.688rem 4.85rem;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.reservedContainer {
+  border: 2px solid rgb(223, 223, 223);
+  width: 400px;
+}
+
+.reserved {
+  border-bottom: 2px solid rgb(223, 223, 223);
+  padding: 12px;
+  color: rgb(33, 37, 41);
+}
+
+.reserved:last-child {
+  border-bottom: 0;
+}

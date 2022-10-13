@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Mission from './MissionList';
-import { joinMissions } from '../redux/Missions/mission';
-import style from './styles/Mission.module.css';
+import Mission from '../MissionList';
+import { joinMissions } from '../../redux/Missions/mission';
+import style from '../styles/Mission.module.css';
 
 const MissionLists = () => {
   const missions = useSelector((state) => state.missions);
