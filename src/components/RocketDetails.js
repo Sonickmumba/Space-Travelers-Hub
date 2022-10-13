@@ -1,6 +1,13 @@
+/* eslint-disable camelcase */
+/* eslint-disable react/forbid-prop-types */
+/* eslint-disable no-unused-vars */
 import React from 'react';
+import { PropTypes } from 'prop-types';
 
-const RocketDetails = () => {
+const RocketDetails = ({ rocket }) => {
+  const {
+    description, flickr_images, id, rocket_name,
+  } = rocket;
   const imageDivStyle = {
     width: '250px',
     height: '250px',
@@ -47,21 +54,27 @@ const RocketDetails = () => {
   return (
     <>
       <div style={imageDivStyle}>
-        <img src="https://imgur.com/DaCfMsj.jpg" alt="rocket-logo" style={imageStyle} />
+        <img src={flickr_images} alt="rocket-logo" style={imageStyle} />
       </div>
       <div className="rocket-info">
-        <h1 style={titleStyle}>Falcon 1</h1>
+        <h1 style={titleStyle}>{rocket_name}</h1>
         <div style={descriptionStyle}>
           <span style={reserveStyle}>Reserved</span>
-          The Falcon 1 was an expendable launch system privately developed
-          and manufactured by SpaceX during 2006-2009. On 28 September 2008,
-          Falcon 1 became the first
-          privately-developed liquid-fuel launch vehicle to go into orbit around the Earth.
+          {description}
         </div>
         <button type="button" style={buttonStyle}>Reserve Rocket</button>
       </div>
     </>
   );
+};
+
+RocketDetails.propTypes = {
+  rocket: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    description: PropTypes.string.isRequired,
+    rocket_name: PropTypes.string.isRequired,
+    flickr_images: PropTypes.array.isRequired,
+  }).isRequired,
 };
 
 export default RocketDetails;
