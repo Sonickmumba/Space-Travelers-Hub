@@ -11,5 +11,6 @@ const allReducers = combineReducers({
 });
 
 const store = configureStore({ reducer: allReducers }, applyMiddleware(thunk));
+// const store = configureStore({ reducer: allReducer, middleware: [thunk] });
 
 export default store;

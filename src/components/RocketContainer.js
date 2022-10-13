@@ -5,7 +5,7 @@ import RocketDetails from './RocketDetails';
 import { getRocketsFromApi } from '../redux/rockets/rockets';
 
 const RocketContainer = () => {
-  const { rockets } = useSelector((state) => state.rockets);
+  const rockets = useSelector((state) => state.rockets);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -26,11 +26,6 @@ const RocketContainer = () => {
           </div>
         ))}
       </main>
-      {/* <main>
-        <div style={hubContainer}>
-          <RocketDetails />
-        </div>
-      </main> */}
     </>
   );
 };
