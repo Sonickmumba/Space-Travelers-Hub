@@ -1,3 +1,24 @@
-.table {
-  border: 2px grey solid;
+table {
+  border: 1px grey solid;
+  border-collapse: collapse;
+  margin: 2rem;
+}
+
+th {
+  border: 1px grey solid;
+  text-align: start;
+  padding: 0.5rem;
+}
+
+.description {
+  width: 70%;
+}
+
+.mission {
+  width: 10%;
+}
+
+.status {
+  border: 1px grey solid;
+  width: 10%;
 }

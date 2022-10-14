@@ -1,9 +1,17 @@
+import { type } from '@testing-library/user-event/dist/type';
+
 const READ = 'spaceTravel/missions/READ';
+const BOOK = 'spaceTravel/missions/BOOK';
+const LEAVE = 'spaceTravel/missions/BOOK';
 
 export const read = (missions) => ({
   type: READ,
   payload: missions,
 });
+
+export const book = (id) => {
+  type;
+};
 
 const missionsReducer = (state = [], action) => {
   switch (action.type) {

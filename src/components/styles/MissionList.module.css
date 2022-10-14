@@ -1,0 +1,38 @@
+td {
+  border: 1px grey solid;
+  padding: 0.5rem;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(211, 211, 211, 0.303);
+}
+
+.name {
+  width: 10%;
+  font-weight: bolder;
+  padding-bottom: 55px;
+}
+
+.description {
+  width: 50%;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.active .mission {
+  width: 20%;
+}
+
+.activeBtn {
+  background-color: rgb(54, 160, 170);
+  color: #fff;
+  font-size: 0.7rem;
+  border: none;
+  border-radius: 3px;
+  height: 1rem;
+}
+
+.missionBtn {
+  background-color: #fff;
+  padding: 0.5rem;
+}
