@@ -23,3 +23,7 @@
 .reserved:last-child {
   border-bottom: 0;
 }
+
+.nav-link:target {
+  text-decoration: underline;
+}

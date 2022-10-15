@@ -13,17 +13,21 @@ const MissionLists = () => {
   });
   return (
     <table className={style.table}>
-      <thead>
-        <tr>
-          <th>Mission</th>
-          <th>Description</th>
-          <th>Status</th>
+      <thead className={style.theader}>
+        <tr className={style.header}>
+          <th className={style.titles}>Mission</th>
+          <th className={style.titles}>Description</th>
+          <th className={style.titles}>Status</th>
+          <th className={style.titles}> </th>
         </tr>
+
         {missions.map((mission) => (
           <Mission
             key={mission.mission_id}
             name={mission.name}
             description={mission.description}
+            id={mission.mission_id}
+            reserved={mission.reserved}
           />
         ))}
       </thead>
