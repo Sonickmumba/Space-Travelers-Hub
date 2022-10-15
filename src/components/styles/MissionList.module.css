@@ -19,20 +19,36 @@ tr:nth-child(even) {
   font-size: 0.9rem;
 }
 
-.active .mission {
+.active {
+  text-align: center;
+  vertical-align: middle;
+  padding: 5px;
+  position: relative;
+}
+
+.mission {
   width: 20%;
 }
 
-.activeBtn {
-  background-color: rgb(54, 160, 170);
-  color: #fff;
-  font-size: 0.7rem;
-  border: none;
-  border-radius: 3px;
-  height: 1rem;
+.show {
+  display: unset;
 }
 
-.missionBtn {
-  background-color: #fff;
-  padding: 0.5rem;
+.hide {
+  display: none;
+}
+
+.join,
+.leave {
+  border-radius: 4px;
+  background: none;
+}
+
+.join {
+  border-color: black;
+}
+
+.leave {
+  border-color: red;
+  color: red;
 }

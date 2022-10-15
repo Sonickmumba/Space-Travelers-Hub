@@ -1,5 +1,5 @@
 const READ = 'spaceTravel/missions/READ';
-const BOOK = "spaceTravel/missions/BOOK";
+const BOOK = 'spaceTravel/missions/BOOK';
 const LEAVE = 'spaceTravel/missions/LEAVE';
 
 export const read = (missions) => ({
@@ -9,7 +9,7 @@ export const read = (missions) => ({
 
 export const book = (id) => ({
   type: BOOK,
-  payload: id
+  payload: id,
 });
 
 export const leave = (id) => ({
@@ -26,9 +26,9 @@ const missionsReducer = (state = [], action) => {
         if (item.mission_id !== action.payload) return item;
         return { ...item, reserved: true };
       });
-      return newState
+      return newState;
     case LEAVE:
-         newState = state.map((item) => {
+      newState = state.map((item) => {
         if (item.mission_id !== action.payload) return item;
         return { ...item, reserved: false };
       });
