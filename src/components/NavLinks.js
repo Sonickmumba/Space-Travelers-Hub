@@ -10,7 +10,7 @@ const NavLinks = () => {
     textDecoration: 'none',
     width: '3.688rem',
     height: '1rem',
-    margin: '1.125rem 2.563rem 0.688rem 0',
+    margin: '1.125rem 2.063rem 0.688rem 0',
     fontSize: '1rem',
     letterSpacing: '1.9px',
     color: '#0290ff',
