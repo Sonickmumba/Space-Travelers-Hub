@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+# Bookstore
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> "Space Travelers' Hub" is a a web application for a company that provides commercial and scientific space travel services. The application allows users to book rockets and join selected space missions using real live data from the SpaceX API.
+## Built With ⚙️
 
-## Available Scripts
+- **Major languages**: HTML, CSS, & JavaScript.
+- **Frameworks**: React.
+- **Linters**: Lighthouse, Webhint, Stylelint and ESLint.
+- **Technologies used**: NPM, Webpack, & Jest Library.
+- **Tools**: Git, Gitflow, GitHub, VS Code, & Chrome Browser.
 
-In the project directory, you can run:
+## Live Demo (Deployed on GitHub Pages with SSL)
 
-### `npm start`
+[Live Demo Link]()
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Video Presentation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+[Live Video Link]()
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To get a local copy up and running follow these simple example steps.
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [x] Basic knowledge of **React**.
+- [x] Basic knowledge of **redux**.
+- [x] Basic Knowledge of **HTML**, **CSS**, & **JavaScript**.
+- [x] Basic knowledge of **ES6** syntax.
+- [x] Basic knowledge of **Git**, **GitHub** &**Gitflow**.
+- [x] Basic knowledge of **Linters**.
+- [x] Basic knowledge of **Webpack**.
+- [x] Basic knowledge of **Jest** unit-testing library.
+- [x] Basic knowledge of **VS Code** or any other code-editors.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Create a new **Microverse** folder and move into it.
+- Open the **Command Prompt (CMD)** in the current directory (Microverse Folder).
+- Run the following command:
 
-### `npm run eject`
+```
+$ git@github.com:Sonickmumba/Space-Travelers-Hub.git
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Once finished you should see a new folder called **Space Travelers' Hub ** in your current directory.
+- cd into the folder and run the following commands:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+$ npm install
+```
+```
+$ npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Start customizing the project so it fits your personal preferences and needs.
+- Enjoy your new professional **Space Travelers' Hub** application!
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Run tests
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+To check for linters, use the files provided by [Microverse](https://github.com/microverseinc/linters-config). A GitHub action is also set to run during pull request.
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+For deployment you can use the **[GitHub Pages](https://pages.github.com/)**.
 
-### `npm run build` fails to minify
+## Authors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+👤 **Sonick Mumba ([Sonickmumba](https://github.com/Sonickmumba))**
+
+- GitHub: [Sonickmumba](https://github.com/Sonickmumba)
+- Twitter: [@Sonick](https://twitter.com/MumbaSonick)
+- LinkedIn: [Sonick Mumba](https://www.linkedin.com/in/sonick-m-301557a2/)
+
+👤 **Tommymarvel ([https://github.com/Tommymarvel)**
+
+- GitHub: [Tommymarvel](https://github.com/Tommymarvel)
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Acknowledgments
+- [Zeplin project](https://app.zeplin.io/project/5b35a9e13227086040f8eb75/screen/5b695e29bb8c844f118f9378) for the design
+- [Microverse](https://www.microverse.org/)
+- Code Reviewers & Coding Partners
+- etc
+
+## 📝 License
+
+This project is [MIT](./LICENSE) licensed.
+
+_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
