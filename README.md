@@ -75,6 +75,8 @@ For deployment you can use the **[GitHub Pages](https://pages.github.com/)**.
 👤 **Tommymarvel ([https://github.com/Tommymarvel)**
 
 - GitHub: [Tommymarvel](https://github.com/Tommymarvel)
+- Twitter: [@tomiwa_ibironke](https://twitter.com/tomiwa_ibironke)
+
 ## Show your support
 
 Give a ⭐️ if you like this project!
