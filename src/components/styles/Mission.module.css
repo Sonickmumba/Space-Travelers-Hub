@@ -1,12 +1,13 @@
 body {
   padding: 1.438rem 6.188rem 1.688rem 4.85rem;
 }
+
 .table {
   border-collapse: collapse;
 }
 
 .missionContainer {
-  height: 120px; 
+  height: 120px;
 }
 
 .missionContainer:nth-child(even) {
@@ -16,7 +17,6 @@ body {
 .missionContainer:nth-child(old) {
   background-color: #fff;
 }
-
 
 .tdata {
   padding: 8px;
