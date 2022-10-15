@@ -1,51 +1,46 @@
 import React from 'react';
-import image from './planet.png';
-import NavLinks from './NavLinks';
+import { NavLink } from 'react-router-dom';
+import style from './styles/navlinks.module.css';
 
-const Header = () => {
-  const headerStyle = {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    height: '7.938rem',
-    margin: '0 0 2.375rem',
-    padding: '1.438rem 6.188rem 1.688rem 4.85rem',
-    backgroundColor: '#fff',
-    border: 'solid 1px #e8e8e8',
+const NavLinks = () => {
+  const activeStyle = {
+    color: 'darkcyan',
+    borderBottom: '2px solid',
+    paddingBottom: '.2rem',
   };
 
-  const headerTitleStyle = {
-    width: '20rem',
-    height: '2.313rem',
-    margin: '0.375rem 2.538rem 0.125rem 0',
-    fontFamily: 'Montserrat',
-    fontSize: '1.875rem',
-    fontWeight: 'bold',
-    fontStretch: 'normal',
-    fontStyle: 'normal',
-    lingHeight: 'normal',
-    letterSpacing: 'normal',
-  };
-
-  const logoContainerStyle = {
-    display: 'flex',
-    gap: '20px',
-    alignItems: 'center',
-  };
-
-  const imageStyle = {
-    width: '100px',
-    height: '100px',
+  const separator = {
+    border: '1px solid black',
+    height: '15px',
   };
   return (
-    <header style={headerStyle}>
-      <div style={logoContainerStyle}>
-        <img src={image} alt="logo" style={imageStyle} />
-        <h1 style={headerTitleStyle}>Space Travelers Hub</h1>
-      </div>
-      <NavLinks />
-    </header>
+    <nav className={style.navigation}>
+      <NavLink
+        to="/"
+      >
+        {' '}
+        Rockets
+        {' '}
+      </NavLink>
+      <NavLink
+        to="/mission"
+        style={({ isActive }) => (isActive ? activeStyle : undefined)}
+      >
+        {' '}
+        Missions
+        {' '}
+      </NavLink>
+      <div style={separator} />
+      <NavLink
+        to="/Profile"
+        style={({ isActive }) => (isActive ? activeStyle : undefined)}
+      >
+        {' '}
+        My Profile
+        {' '}
+      </NavLink>
+    </nav>
   );
 };
 
-export default Header;
+export default NavLinks;
