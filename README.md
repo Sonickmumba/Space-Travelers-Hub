@@ -11,7 +11,7 @@
 
 ## Live Demo (Deployed on GitHub Pages with SSL)
 
-[Live Demo Link]()
+[Live Demo Link](https://effervescent-gecko-9fc71e.netlify.app)
 
 ## Video Presentation
 
